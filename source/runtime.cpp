@@ -225,7 +225,8 @@ void reshade::runtime::on_present()
 	}
 	else
 	{
-		_has_high_network_activity = traffic > 10;
+		// disabled to allow depth buffer usage in online games // DO NOT USE THIS IN GAMES WITH CHEAT DETECTION!
+		//_has_high_network_activity = traffic > 10;
 		traffic = 0;
 		cooldown = 60;
 	}
